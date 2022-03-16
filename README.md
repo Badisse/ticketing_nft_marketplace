@@ -1,34 +1,73 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Ticketing NFT Marketplace
 
-## Getting Started
+## Description
 
-First, run the development server:
+
+## Features
+
+- ⚡️ Next.js 12
+- ⚛️ React 17
+- ⛑ TypeScript
+- 📏 ESLint — Find and fix problems in your code
+- 💖 Prettier — Code Formatter for consistent style
+- 🐶 Husky — For running scripts before committing
+- 📄 Commitizen — To define a standard way of committing rules
+- 🚓 Commitlint — Make sure your commit messages follow the convention
+- 🖌 Renovate — Keep your dependencies up to date
+- 🚫 lint-staged — To run ESLint and Prettier against staged Git files
+- 👷 PR Workflow — Run Type Check & Linters on all Pull Requests
+- ⚙️ EditorConfig - Maintain consistent coding styles across editors and IDEs
+- 🗂 Path Mapping — Import components or images using the `@` prefix
+
+## Development
+
+To start the project locally, run:
 
 ```bash
-npm run dev
-# or
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000` with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Documentation
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### Requirements
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- Node.js >= 12.22.0
+- Yarn 1 (Classic)
 
-## Learn More
+### Directory Structure
 
-To learn more about Next.js, take a look at the following resources:
+- [`.github`](.github) — GitHub configuration including the CI workflow.<br>
+- [`.husky`](.husky) — Husky configuration and hooks.<br>
+- [`public`](./public) — Static assets such as robots.txt, images, and favicon.<br>
+- [`src`](./src) — Application source code, including pages, components, styles.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- `yarn dev` — Starts the application in development mode at `http://localhost:3000`.
+- `yarn build` — Creates an optimized production build of your application.
+- `yarn start` — Starts the application in production mode.
+- `yarn type-check` — Validate code using TypeScript compiler.
+- `yarn lint` — Runs ESLint for all files in the `src` directory.
+- `yarn format` — Runs Prettier for all files in the `src` directory.
+- `yarn commit` — Run commitizen. Alternative to `git commit`.
 
-## Deploy on Vercel
+### Path Mapping
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+TypeScript are pre-configured with custom path mappings. To import components or files, use the `@` prefix.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```tsx
+import { Button } from '@/components/Button';
+
+// To import images or other files from the public folder
+import avatar from '@/public/avatar.png';
+```
+
+### Switch to npm
+
+By default, this starter uses Yarn 1 (Classic), but this choice is yours. If you'd like to switch to npm, delete the `yarn.lock` file, install the dependencies with `npm install`, and change the CI workflows, Husky Git hooks, and lint-staged steps to use npm commands.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for more information.
